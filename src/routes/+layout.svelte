@@ -416,7 +416,7 @@
 				console.log('chatEventHandler', event);
 			}
 		}
-	};
+	});
 
 	const channelEventHandler = async (event) => {
 		console.log('channelEventHandler', event);
