@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { io } from 'socket.io-client';
 	import { spring } from 'svelte/motion';
 	import { Toaster, toast } from 'svelte-sonner';
@@ -323,7 +323,6 @@
 				console.log('execute:python (disabled)', data);
 				toast.error('Python code execution is disabled in this NeuroNXS build.');
 				if (cb) cb({ stdout: null, stderr: 'Python execution disabled', result: null });
-			}
 			} else if (type === 'execute:tool') {
 				console.log('execute:tool', data);
 				executeTool(data, cb);
